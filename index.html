@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Password Generator</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/431c49bad6.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1 class="title">Password Generator</h1>
+    <p class="choices">Number of password groups</p>
+    <div class="toggle-tab">
+      <button class="tab active" data-groups="1">1</button>
+      <button class="tab" data-groups="2">2</button>
+      <button class="tab" data-groups="3">3</button>
+    </div>
+    <button class="generate-button">Generate</button>
+    <div class="password-container">
+      <p class="password"></p>
+      <i class="fa-regular fa-clone copy-icon"></i>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+  <script src="/script.js"></script>
+</body>
+
+</html>

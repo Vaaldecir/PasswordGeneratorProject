@@ -1,0 +1,122 @@
+* {
+  margin: unset;
+}
+html {
+  --s: 50px; /* control the size*/
+  --c1: #c0c0c0;
+  --c2: #a4a9aa;
+  --c3: #ffffff;
+
+  --p: at 45% 40%, #0000 75%;
+  --g1: conic-gradient(var(--p) var(--c1) 0);
+  --g2: conic-gradient(var(--p) var(--c2) 0);
+  background: conic-gradient(at 45% 40%, #0000 75%, var(--c1) 0) 0 0,
+    conic-gradient(at 45% 40%, #0000 75%, var(--c2) 0) calc(2 * var(--s)) 0,
+    conic-gradient(at 45% 40%, #0000 75%, var(--c2) 0) calc(3 * var(--s))
+      var(--s),
+    conic-gradient(at 45% 40%, #0000 75%, var(--c1) 0) var(--s) var(--s),
+    var(--c3);
+  background-size: calc(4 * var(--s)) calc(2 * var(--s));
+}
+
+body {
+  align-items: center;
+  color: hsl(240 4.8% 95.9%);
+  display: flex;
+  font-family: "Space Grotesk", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  height: 100vh;
+  justify-content: center;
+  margin: unset;
+}
+
+.container {
+  backdrop-filter: blur(10px);
+  background-color: hsl(240 10% 3.9% / 0.8);
+  border: 1px solid hsl(240 3.7% 15.9%);
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 24px 32px;
+}
+
+.toggle-tab {
+  background: hsl(240, 4%, 16%);
+  border: 1px solid hsl(240, 4%, 30%);
+  border-radius: 6px;
+  display: flex;
+  gap: 4px;
+  justify-content: center;
+  margin-bottom: 20px;
+  padding: 4px;
+  width: fit-content;
+}
+
+.tab {
+  background: transparent;
+  border: none;
+  border-radius: 5px;
+  color: hsl(0, 0%, 94%);
+  cursor: pointer;
+  font-size: 0.8rem;
+  padding: 10px 20px;
+  transition: background-color ease-out 150ms;
+}
+
+.tab:hover {
+  background-color: hsl(240, 4%, 10%);
+}
+
+.active {
+  background-color: hsl(240, 10%, 4%);
+  transition: background-color ease-out 150ms;
+}
+
+.active:hover {
+  background-color: hsl(240, 10%, 6%);
+}
+.generate-button {
+  background: hsl(240, 4%, 16%);
+  border: 1px solid hsl(240, 4%, 30%);
+  border-radius: 0.5rem;
+  color: hsl(0, 0%, 94%);
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 12px 24px;
+  transition: background-color 150ms;
+}
+
+.generate-button:hover {
+  background-color: hsl(240, 4%, 20%);
+}
+
+.generate-button:active {
+  background-color: hsl(240, 4%, 15%);
+}
+.password-container {
+  align-items: center;
+  border: 2px solid hsl(120, 61%, 50%);
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  padding: 10px;
+}
+
+.password {
+  color: hsl(120, 61%, 50%);
+  font-size: 1rem;
+  font-family: "Fira Code", "Courier New", Courier, monospace;
+  margin-left: 10px;
+}
+.fa-regular {
+  left: -16px;
+  bottom: -8px;
+  color: hsl(120, 61%, 50%);
+  margin-left: auto;
+}
+
+.copy-icon {
+  transition: transform 0.2 ease;
+}
